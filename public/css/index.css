@@ -1,11 +1,12 @@
 html, body {
-    box-sizing: border-box;
-    width: 100%;
+    background-color: #222222;
     height: 100%;
-    background-color: dimgray;
 }
 
-body {
-    padding: 4px;
-    border: 2px solid lightslategray;
+.dark {
+    background-color: #333333;
+}
+
+.navbar, .navbar-default {
+    border: 0px;
 }
