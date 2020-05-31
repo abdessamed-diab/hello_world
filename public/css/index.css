@@ -5,8 +5,14 @@ html, body {
 
 .dark {
     background-color: #333333;
+    padding: 0px;
 }
 
 .navbar, .navbar-default {
     border: 0px;
+}
+
+h3 {
+    color: aliceblue;
+    display: inline-block;
 }
