@@ -1,31 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
   <title>RAHBA - Marketplace</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="login page">
+  <meta name="author" content="abdessamed diab">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
   <link rel="icon" href="../favicon.ico" type="image/ico" sizes="16x16">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="../css/index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
 
-  <div class="container dark">
-    <span>
-      <i class="fa fa-amazon" style="font-size:24px; color: lightseagreen"></i>
-      <h3>check RAHBA web site ...</h3>
-    </span>
+  <!--you should put this in the end to prevent overrides.-->
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body id="body">
+  <div class="container-fluid dark center-text">
+    <h1 class="font-h1" style="display: inline-block">rahba</h1>
+    <i class="fa fa-500px" aria-hidden="true" style="color: lightseagreen; font-size: 24px"></i>
   </div>
 
-  <div class="container" style="height: 80%">
-    <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/oM1cvuMr7S0?controls=0" frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+  <br />
 
-    </iframe>
+  <div class="container">
+
+    <div class="input-group" >
+      <span class="input-group-addon"><i class="fa fa-user-circle"></i></span>
+      <input id="email" class="form-control" type="text" placeholder="Mobile number or email" width="100%"/>
+    </div>
+
+    <div class="input-group" style="margin-bottom: 8px">
+      <span class="input-group-addon"><i class="fa fa-key"></i></span>
+      <input id="password" class="form-control" type="text" placeholder="Password" width="100%"/>
+    </div>
+
+    <button id="loginButton" type="button" class="btn btn-primary btn-block font-element">Log in</button>
+
+
+    <br />
+    <br />
+
+    <div class="row">
+      <div class="col-xs-3 col-sm-4 col-md-4 col-lg-5"></div>
+      <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2">
+        <button id="signIn" type="button" class="btn btn-success btn-block font-element" >Create new Account</button>
+      </div>
+      <div class="col-xs-3 col-sm-4 col-md-4 col-lg-5"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-3 col-sm-4 col-md-4 col-lg-5"></div>
+      <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2">
+        <button type="button" class="btn btn-link btn-block font-element center-text" >Forget Password?</button>
+      </div>
+      <div class="col-xs-3 col-sm-4 col-md-4 col-lg-5"></div>
+    </div>
+
+  </div>
+
+  <br />
+  <br />
+  <br />
+  <br />
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-5 col-sm-4 col-md-3 col-lr-3">
+        <span style="text-align: right">
+          <h4 class="font-label">English (US)</h4>
+          <h4 class="font-label">English (EU)</h4>
+          <h4 class="font-label">English (UK)</h4>
+        </span>
+      </div>
+      <div class="col-xs-2 col-sm-4 col-md-6 col-lr-6"></div>
+      <div class="col-xs-5 col-sm-4 col-md-3 col-lr-3">
+        <span style="text-align: left">
+          <h4 class="font-label">Francais (FR)</h4>
+          <h4 class="font-label">English (US)</h4>
+          <h4 class="font-label">English (EU)</h4>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: absolute; bottom: 0">
+    <div class="container">
+      <h4 class="font-label" style="color: #22222244">for further Information go to Contact.</h4>
+    </div>
   </div>
 
 </body>
+
 </html>
