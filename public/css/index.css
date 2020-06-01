@@ -1,10 +1,25 @@
-html, body {
-    background-color: #33333311;
-    height: 100%;
+@media only screen and (min-width: 600px) {
+    .container {
+        width: 512px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EEEEEE;
+    cursor: pointer;
 }
 
 .dark {
     background-color: #444444;
+}
+
+.info {
+    background-color: lightgoldenrodyellow;
+    border-bottom: 1px solid orange;
 }
 
 .center-text {
@@ -24,6 +39,7 @@ html, body {
     text-transform: none;
 
     text-shadow: 0 0 4px gray;
+    line-height: 75%;
 }
 
 .font-element {
@@ -33,9 +49,15 @@ html, body {
 }
 
 .font-label {
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
     word-spacing: 0px;
-    font-weight: normal;
-    font-size: 1.1em;
-    color: #111111;
+    font-weight: bold;
+    font-size: 0.95em;
+    color: lightslategray;
+    line-height: 75%;
+}
+
+hr {
+    border-top: 1px solid lightslategray;
+    box-shadow: 0 0 2px lightslategray;
 }
