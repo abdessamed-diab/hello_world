@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>RAHBA - Marketplace</title>
+  <title>RAHBA - ساحة السوق</title>
   <meta charset="UTF-8">
-  <meta name="description" content="login page">
+  <meta name="description" content="ابحث عن منتجك وقم بتقييمه ومقارنته وتفاوضه وشراءه بأفضل سعر.">
   <meta name="author" content="abdessamed diab">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta property="og:url"                content="http://www.rahba.net" />
   <meta property="og:type"               content="website" />
-  <meta property="og:title"              content="Rahba - Marketplace" />
-  <meta property="og:description"        content="search , evaluate , compare , negociate and buy your product with the best price." />
+  <meta property="og:title"              content="Rahba - ساحة السوق" />
+  <meta property="og:description"        content="ابحث عن منتجك وقم بتقييمه ومقارنته وتفاوضه وشراءه بأفضل سعر." />
   <meta property="og:image"              content="http://www.rahba.net/stamp-lowest-price.png" />
+  <meta property="og:image:width"        content="192"/>
+  <meta property="og:image:height"       content="192"/>
 
   <link rel="canonical" href="http://www.rahba.net" />
   <link rel="icon" href="../favicon.ico" type="image/ico" sizes="16x16">
@@ -21,45 +23,50 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/maps.js"></script>
+  <script src="https://www.amcharts.com/lib/4/geodata/lang/AR.js"></script>
+  <script src="https://www.amcharts.com/lib/4/geodata/algeriaHigh.js"></script>
+  <script src="../script/maps/country_1.1.0.js"></script>
+
   <!--you should put this in the end to prevent overrides.-->
-  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/index_1.1.0.css">
 </head>
 
-<body id="body">
+<body id="body" onload="createMapInstance()">
   <div class="container-fluid dark center-text">
-    <h1 class="font-h1" style="display: inline-block">rahba</h1>
-    <i class="fa fa-500px" aria-hidden="true" style="color: lightseagreen; font-size: 24px"></i>
+    <h1 class="font-h1" style="display: inline-block">RAHBA</h1>
   </div>
   <div class="container-fluid info">
-    <h6 class="font-label">You must log in first.</h6>
+    <h6 class="font-label">البريد الإلكتروني أو رقم الهاتف الذي أدخلته لا يطابق أي حساب. ‏قم بالتسجيل للحصول على حساب.‏</h6>
   </div>
 
   <br />
 
   <div class="container">
 
-    <div class="input-group" >
+    <div class="input-group" dir="rtl">
       <span class="input-group-addon"><i class="fa fa-user-circle"></i></span>
-      <input id="email" class="form-control" type="text" placeholder="Mobile number or email" width="100%"/>
+      <input id="email" class="form-control font-label" type="text" placeholder="رقم الهاتف المحمول أو البريد الإلكتروني" width="100%"/>
     </div>
 
-    <div class="input-group" style="margin-bottom: 8px">
+    <div class="input-group" style="margin-bottom: 8px" dir="rtl">
       <span class="input-group-addon"><i class="fa fa-key"></i></span>
-      <input id="password" class="form-control" type="text" placeholder="Password" width="100%"/>
+      <input id="password" class="form-control font-label" type="password" placeholder="كلمة السر" width="100%"/>
     </div>
 
-    <button id="loginButton" type="button" class="btn btn-primary btn-block font-element">Log in</button>
+    <button id="loginButton" type="button" class="btn btn-primary btn-block font-element">تسجيل الدخول</button>
 
     <div class="row" >
       <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><hr></div>
-      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><h5 class="center-text">or</h5></div>
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><h5 class="font-element center-text">أو</h5></div>
       <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><hr></div>
     </div>
 
     <div class="row">
       <div class="col-xs-3 col-sm-4 col-md-4 col-lg-4"></div>
       <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-        <button id="signIn" type="button" class="btn btn-success btn-block font-element" >Create new Account</button>
+        <button id="signIn" type="button" class="btn btn-success btn-block font-element" >إنشاء حساب جديد</button>
       </div>
       <div class="col-xs-3 col-sm-4 col-md-4 col-lg-4"></div>
     </div>
@@ -67,7 +74,7 @@
     <div class="row">
       <div class="col-xs-3 col-sm-4 col-md-4 col-lg-4"></div>
       <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-        <button type="button" class="btn btn-link btn-block font-element center-text" style="margin-top: 8px; text-decoration: none" >Forget Password?</button>
+        <button type="button" class="btn btn-link btn-block font-element font-element" style="margin-top: 8px; text-decoration: none" >هل نسيت كلمة السر؟</button>
       </div>
       <div class="col-xs-3 col-sm-4 col-md-4 col-lg-4"></div>
     </div>
@@ -76,32 +83,14 @@
 
   <br />
   <br />
-  <br />
-  <br />
-
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-5 col-sm-4 col-md-3 col-lr-3">
-        <span style="text-align: right">
-          <h4 class="font-label">English (US)</h4>
-          <h4 class="font-label">English (EU)</h4>
-          <h4 class="font-label">English (UK)</h4>
-        </span>
-      </div>
-      <div class="col-xs-2 col-sm-4 col-md-6 col-lr-6"></div>
-      <div class="col-xs-5 col-sm-4 col-md-3 col-lr-3">
-        <span style="text-align: left">
-          <h4 class="font-label">Francais (FR)</h4>
-          <h4 class="font-label">English (US)</h4>
-          <h4 class="font-label">English (EU)</h4>
-        </span>
-      </div>
-    </div>
+  <div class="container" style="max-height: 512px">
+    <div id="dzCountryDiv" style="height: 360px"></div>
   </div>
 
-  <div style="position: absolute; bottom: 0">
+
+  <div style="position: absolute; bottom: 0; right: 0">
     <div class="container-fluid">
-      <h4 class="font-label" style="color: #22222244">for further Information go to Contact us.</h4>
+      <h4 class="font-label" style="color: #22222244">المزيد من المعلومات يرجى الاتصال</h4>
     </div>
   </div>
 
