@@ -1,6 +1,6 @@
 /*https://fonts.google.com/earlyaccess*/
-@import url(//fonts.googleapis.com/earlyaccess/thabit.css);
 @import url(//fonts.googleapis.com/earlyaccess/notonastaliqurdu.css);
+@import url(//fonts.googleapis.com/earlyaccess/notokufiarabic.css);
 
 @media only screen and (min-width: 600px) {
     .container {
@@ -13,12 +13,12 @@
 }
 
 body {
-    background-color: white;
+    background-color: #333333;
     cursor: pointer;
 }
 
 .dark {
-    background-color: #333333;
+    background-color: #444444;
 }
 
 .info {
@@ -48,14 +48,11 @@ body {
 
 .font-element {
     font-family: 'Noto Nastaliq Urdu', serif;
-    letter-spacing: -1px;
-    word-spacing: 0px;
-    font-weight: 700;
 }
 
 .font-label {
     text-align: right;
-    font-family: 'Thabit', monospace;
+    font-family: 'Noto Kufi Arabic', sans-serif;
     font-size: small;
     color: black;
     line-height: 75%;
