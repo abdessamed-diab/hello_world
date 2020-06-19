@@ -1,0 +1,65 @@
+/*https://fonts.google.com/earlyaccess*/
+@import url(//fonts.googleapis.com/earlyaccess/notonaskharabic.css);
+@import url(//fonts.googleapis.com/earlyaccess/notokufiarabic.css);
+
+@media only screen and (min-width: 600px) {
+    .container {
+        width: 512px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgray;
+    cursor: pointer;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+.dark {
+    background-color: #444444;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.font-h1 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    letter-spacing: -1px;
+    word-spacing: 0px;
+    color: ghostwhite;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+
+    text-shadow: 0 0 4px gray;
+    line-height: 75%;
+}
+
+.font-element {
+    font-family: 'Noto Naskh Arabic', serif;
+    font-weight: bold;
+}
+
+.info {
+    background-color: lightgoldenrodyellow;
+    border-bottom: 1px solid orange;
+}
+
+.font-label {
+    text-align: right;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-size: small;
+    color: black;
+    line-height: 75%;
+}

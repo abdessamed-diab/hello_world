@@ -1,0 +1,57 @@
+
+.div-profile-container {
+    height: 512px;
+    position: relative;
+    top: 20%;
+    -ms-transform: translateY(-20%);
+    transform: translateY(-20%);
+}
+/*https://www.webfx.com/blog/images/assets/cdn.sixrevisions.com/0457-01-css-box-shadow-demo/demo.html*/
+.div-profile-holder {
+    padding: 64px;
+    background-color: #44444411;
+    height: 100%;
+    box-shadow: 0 0 10px;
+}
+
+.div-profile {
+    background-color: lightgray;
+    /*box-shadow: inset 0 0 10px;*/
+    box-shadow: 0 0 5px;
+    padding: 8px;
+    text-align: center;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+.div-profile h3 {
+    margin-top: 10px;
+
+    font-family: 'Noto Naskh Arabic', serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.div-profile:hover {
+    background-color: white;
+    /*box-shadow: inset 0 0 10px;*/
+    box-shadow: inset 0 0 5px;
+}
+
+.div-finger-print {
+    z-index: 100;
+    position: absolute;
+    left: -48px;
+    top: -64px;
+    width: 128px;
+    height: 128px;
+    background-color: #11111111;
+    transform: rotateZ(-40deg);
+}
+
+.div-profile-bottom {
+    z-index: -100;
+    width: 100%;
+    margin-top: 16px;
+}
+

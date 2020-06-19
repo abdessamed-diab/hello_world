@@ -12,8 +12,8 @@
   <meta property="og:title"              content="Rahba - ساحة السوق" />
   <meta property="og:description"        content="ابحث عن منتجك وقم بتقييمه ومقارنته وتفاوضه وشراءه بأفضل سعر." />
   <meta property="og:image"              content="http://www.rahba.net/stamp-lowest-price_02.png" />
-  <meta property="og:image:width"        content="64"/>
-  <meta property="og:image:height"       content="64"/>
+  <meta property="og:image:width"        content="256"/>
+  <meta property="og:image:height"       content="256"/>
 
   <link rel="canonical" href="http://www.rahba.net" />
   <link rel="icon" href="../favicon.ico" type="image/ico" sizes="16x16">
@@ -34,6 +34,7 @@
 
   <!--you should put this in the end to prevent overrides.-->
   <link rel="stylesheet" href="../css/index.css?v=1.0.1">
+  <link rel="stylesheet" href="../css/common.css?v=1.0.1">
 </head>
 
 <body id="body" onload="createMapInstance()">
@@ -58,7 +59,10 @@
       <input id="password" class="form-control font-label" type="password" placeholder="كلمة السر" width="100%"/>
     </div>
 
-    <button id="loginButton" type="button" class="btn btn-primary btn-block font-element">تسجيل الدخول</button>
+    <button id="loginButton" type="button" class="btn btn-primary btn-block font-element"
+            onclick="window.location.href = 'http://rahba.net/profile/profile_selection.html'">
+      تسجيل الدخول
+    </button>
 
     <div class="row" >
       <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><hr></div>
