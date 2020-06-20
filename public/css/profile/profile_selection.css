@@ -1,4 +1,4 @@
-
+/*https://www.pngwave.com/png-clip-art-bifiq*/
 .div-profile-container {
     height: 512px;
     position: relative;
@@ -41,12 +41,12 @@
 .div-finger-print {
     z-index: 100;
     position: absolute;
-    left: -48px;
-    top: -64px;
+    left: -32px;
+    top: -48px;
     width: 128px;
     height: 128px;
-    background-color: #11111111;
-    transform: rotateZ(-40deg);
+    /*background-color: #11111111;*/
+    transform: rotateZ(-15deg);
 }
 
 .div-profile-bottom {
