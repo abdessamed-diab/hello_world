@@ -1,0 +1,100 @@
+/*https://getbootstrap.com/docs/3.3/components/#badges*/
+.navbar {
+    min-height: 32px;
+    margin-bottom: 6px;
+}
+
+.navbar-inverse {
+    background-color: #444444;
+}
+
+ul {
+    display: contents;
+}
+
+.nav>li {
+    display: inline-block;
+    float: right;
+    width: 25%;
+    text-align: center;
+}
+
+.div-product-list-container {
+    background-color: #FFFFFFCC;
+    height: 33%;
+    position: relative;
+    width: 100%;
+    padding: 8px 0px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.div-product-box {
+    width: 30%;
+    height: 100%;
+    margin: 0px 4px;
+    background-color: #444444;
+    display: inline-block;
+    border-radius: 8px;
+    box-shadow: 0 0 5px;
+}
+
+.div-publication-container {
+    background-color: #FFFFFFCC;
+    height: 80%;
+    margin-top: 6px;
+}
+
+@media only screen and (min-width: 512px) {
+    .div-product-list-container {
+        height: 50%;
+    }
+
+    .div-product-box {
+        width: 28%;
+    }
+
+    .div-publication-container {
+        min-height: 120%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .div-product-list-container {
+        height: 60%;
+    }
+
+    .div-product-box {
+        width: 25%;
+    }
+
+    .div-publication-container {
+        min-height: 140%;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .div-product-list-container {
+        height: 75%;
+    }
+
+    .div-product-box {
+        width: 23%;
+    }
+
+    .div-publication-container {
+        min-height: 160%;
+    }
+}
+
+.div-publication-header {
+    width: 100%;
+    margin-top: 8px;
+    padding: 4px 16px;
+}
+
+.div-publication-header-content {
+    text-align: right;
+}
+
